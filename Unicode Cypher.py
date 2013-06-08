@@ -7,12 +7,25 @@ for l,revl in zip(string.letters,reverse(string.letters)):
 decode = {' ':' '}
 for l,revl in zip(string.letters,reverse(string.letters)):
     decode[l]=revl
-while True:
+def encode():
+    c = raw_input("Message:")
+    try:
+        sys.stdout.write(encode[i])
+    except KeyError:
+        sys.stdout.write(i)
+def decode():
+    c = raw_input("Message:")
+    try:
+        sys.stdout.write(decode[i])
+    except KeyError:
+        sys.stdout.write(i)
+if __name__ == '__main':
+    while True:
     what = raw_input("Decode or encode").lower()
     if what == "decode":
-        current = decode
+        current = Decode
     elif what == "encode":
-        current = encode
+        current = Encode
     else:
         print "What?"
         continue
